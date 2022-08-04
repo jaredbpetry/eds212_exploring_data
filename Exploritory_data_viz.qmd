@@ -35,5 +35,36 @@ tail(penguins)
 ```
 
 ```{r}
+#----good summary of stuff 
+skim(penguins)
+```
+
+```{r}
+#---- DUDE, this one is insane... tons of relationships between variables 
+#----very quick summary ... usually very overkill and still would have to pull up individual -----relationships
+
+GGally::ggpairs(penguins)
+```
+
+## Jitter Plot
+
+Flipper length by species 
+```{r}
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm)) +
+  geom_jitter(width = 0.2, 
+              aplpha = 0.5, 
+              aes(color = species)) +
+  geom_boxplot(fill= NA)+
+  theme_dark()+
+  scale_color_manual(values = c("darkorchid4", "green", "cyan")) +
+  labs(x = "penguin species", y = "flipper length", title = "Flipper length by species")
+
 
 ```
+## Exploratory histogram of bill depth (histogram is only one value)
+```{r}
+ggplot(data = penguins, aes(x= bill_length_mm ) )+
+  geom_histogram(aes(fill=species), color="magenta")+
+  facet_wrap(~species, ncol = 1)
+```
+
