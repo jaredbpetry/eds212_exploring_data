@@ -1,0 +1,39 @@
+---
+title: "exploritory_data_analysis_intro"
+author: "JP"
+format: html
+editor: visual
+---
+
+# Attach packages
+
+```{r}
+#install.packages("GGally")  ----do stuff like this in console so that every time you run this it doesn't try to reinstall
+#install.packages("skimr")
+library(tidyverse)
+library(palmerpenguins)
+library(GGally)
+library(skimr)
+```
+
+## Exploratory Data Visualization
+
+check out your data a bit
+
+```{r}
+#---- tell me the column names 
+names(penguins)
+
+#---- what are the dimensions?
+dim(penguins)
+
+#---- what are the first 6 lines?
+head(penguins)
+
+#---- what are the last 6 lines?
+tail(penguins)
+```
+
+```{r}
+
+```
