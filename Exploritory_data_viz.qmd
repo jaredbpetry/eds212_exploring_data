@@ -63,6 +63,7 @@ ggplot(data = penguins, aes(x = species, y = flipper_length_mm)) +
 ```
 ## Exploratory histogram of bill depth (histogram is only one value)
 ```{r}
+#| eval: false
 ggplot(data = penguins, aes(x= bill_length_mm ) )+
   geom_histogram(aes(fill=species), color="magenta")+
   facet_wrap(~species, ncol = 1)
